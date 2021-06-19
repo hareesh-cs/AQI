@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/styles.css">
+    <style>
+        div{
+            width:800px; 
+            margin:0 auto;
+            float: middle;
+        }
+        </style>
+</head>
+<body>
+
+    <header>
+        <div>
+        <div class="container">
+        <h2 style="color:blue;text-align:center;">Air Quality Index Prediction</h2>
+    </div>
+    </header>
+
+    <div class="container">
+
+        <form action="{{ url_for('predict')}}" method="POST">
+        <p style="color:blue;text-align:center;">Click the Predict Button</p>
+
+        <br/>
+
+        <center><input type="submit" class="btn-info" value="predict"></center>
+
+    </form>
+
+    </div>
+        <div>
+
+
+
+
+</body>
+</html>

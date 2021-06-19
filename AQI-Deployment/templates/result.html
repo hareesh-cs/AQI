@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Results</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        .float-container {
+            width:800px; 
+            margin:0 auto;
+    border: 3px solid #fff;
+    padding: 20px;
+}
+
+.float-child {
+    width: 40%;
+    float: left;
+    padding: 20px;
+    border: 2px solid;
+}  
+
+        </style>
+</head>
+<body>
+
+    <header>
+    </header>
+    <div class="results">
+
+    <h2 style="color:blue;text-align:center;">Air Quality Index Output</h2>
+        
+     <center>  
+         
+     <div class="float-container">
+
+  <div class="float-child">
+    <div >
+        <table>
+         <tbody>
+           <th>Predicted Air Quailty Index</th>
+             {# here we iterate over every item in our list#}
+         {% for item in prediction%}
+             <tr><td>{{ item }}</td></tr>
+         {% endfor %} 
+         </tbody>
+     </table>
+      </div>
+  </div>
+  
+  <div class="float-child">
+    <div>
+        <table>
+         <tbody>
+           <th>Actual Air Quailty Index</th>
+         
+             {# here we iterate over every item in our list#}
+         {% for item in values%}
+             <tr><td>{{ item }}</td></tr>
+         {% endfor %}
+         </tbody>
+     </table>
+      </div>
+  </div>
+  
+</div>
+
+        </center>
+    </div>
+
+</body>
+</html>
